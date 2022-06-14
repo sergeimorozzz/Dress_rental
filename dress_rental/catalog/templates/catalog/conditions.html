@@ -1,0 +1,15 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+  .outer {
+    text-align: center;
+  }
+</style>
+
+<div class="outer">
+    <h1>УСЛОВИЯ АРЕНДЫ</h1>
+</div>
+<a href="{% static 'catalog/DogovorProkata.pdf' %}">Скачать договор проката</a><br>
+{% endblock %}

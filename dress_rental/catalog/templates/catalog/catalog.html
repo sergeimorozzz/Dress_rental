@@ -1,0 +1,24 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<style>
+  .outer {
+    text-align: center;
+  }
+</style>
+<div class="outer">
+<h1>КАТАЛОГ ПЛАТЬЕВ</h1>
+</div>
+<div class="row">
+{% for dress in dresses %}
+    <div class="col-lg-4 col-md-6">
+        <div class="outer">
+<h2>{{ dress.title }}</h2>
+<p>{{ dress.amount }}</p>
+
+<a href="{% url 'catalog_detail' dress.id %}"><img src = '{{ dress.image.url }}' width='auto' height='250'></a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

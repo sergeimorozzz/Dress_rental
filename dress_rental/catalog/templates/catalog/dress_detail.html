@@ -1,0 +1,16 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<style>
+  .outer {
+    text-align: center;
+  }
+</style>
+
+<div class="outer">
+<h2>Детализация платья</h2>
+<h2>{{ dress.title }}</h2>
+<p>{{ dress.amount }}</p>
+<img src = '{{ dress.image.url }}' width='auto' height='auto'>
+{% endblock %}
+</div>
